@@ -12,7 +12,7 @@ body {
     background-color: rgb(85, 85, 85);
 }
 
-.avatar_bild {
+img {
     width: 200px;
     height: 200px;
     z-index: 1;
