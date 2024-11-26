@@ -1,0 +1,38 @@
+/* Allgemeine Stile für den Body */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Container für das Bild */
+.image-container {
+    margin-top: 20px; /* Abstand vom oberen Rand */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bild-Styling und Animation */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    animation: pulsieren 2s infinite;
+}
+
+/* Pulsierende Animation */
+@keyframes pulsieren {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
