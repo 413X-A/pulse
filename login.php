@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($result->num_rows > 0) {
         // Login erfolgreich
         $_SESSION['username'] = $inputUsername;
-        header("Location: mainpage.html"); // Weiterleitung zur Hauptseite
+        header("Location: hauptseite.html"); // Weiterleitung zur Hauptseite
         exit();
     } else {
         // Login fehlgeschlagen
