@@ -1,0 +1,46 @@
+<?php
+session_start(); // Sitzung starten
+
+// Benutzer überprüfen
+if (!isset($_SESSION['username'])) {
+    header("Location: index.html"); // Zurück zur Login-Seite
+    exit();
+}
+
+$username = $_SESSION['username'];
+?>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hauptseite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Willkommen, <?php echo htmlspecialchars($username); ?>!</h1>
+    </header>
+    <main>
+        <p>Das ist die Hauptseite.</p>
+        <a href="logout.php">Abmelden</a>
+    </main>
+</body>
+</html>
